@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+
+  h2 Shell Execution
+  form(action="/ratShell" method="POST")
+    input(name="shellCode" type="text")
+    input(type="submit" value="Send it!")
+  div.output 
+
+  
+
+  script(src="/javascripts/ratPanel.js") 
